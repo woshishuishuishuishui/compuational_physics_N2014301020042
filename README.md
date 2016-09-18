@@ -1,5 +1,5 @@
 # compuational_physics_N2014301020042
-[Exercise_01](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/Exercise02.md)
+[Exercise_01:Print your name](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/Exercise02.md)
 
 Exercise_02
 
