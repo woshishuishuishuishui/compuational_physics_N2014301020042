@@ -9,3 +9,7 @@
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/QQ图片20160918213141.png)
 
 ###2.运行
+
+
+
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/QQ图片20160918213124.png)
