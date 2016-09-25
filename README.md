@@ -1,8 +1,9 @@
 # compuational_physics_N2014301020042
-Exercise_01:Print your name
+Exercise_01:
 
 [Exercise_02:Print your name]
 (https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/Exercise02.md)
+
 [Exercise_03:moving name,moving xxx]
 (https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/Exercise03.md)
 
