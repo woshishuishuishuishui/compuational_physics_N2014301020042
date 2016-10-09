@@ -5,5 +5,6 @@
   以欧拉法为基础，在一种原子核衰变的计算基础上解决这个问题。
 
 ##正文：
-  代码截图：![Alt text]https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/QQ截图20161009234731.png
+  代码截图：
+  ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/QQ截图20161009234731.png)
    
