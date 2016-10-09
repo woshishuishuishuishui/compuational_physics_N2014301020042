@@ -5,8 +5,8 @@
   以欧拉法为基础，在一种原子核衰变的学习基础上解决这个问题。
 
 ##正文：
-  ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/QQ截图20161009234731.png)
-  
+  ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/QQ截图20161010001047.png)
+  ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/QQ截图20161010001148.png)
   
   
 ##结论：
