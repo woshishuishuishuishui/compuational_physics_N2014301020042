@@ -1,0 +1,70 @@
+import pylab as pl
+import math
+class shell:
+    def __init__(self,totaltime=5000,timestep=0.1,v0=700,\
+                   xita=45,\
+                   m=1,B2=0.00004,\
+                   vw=1):
+             self.vx=[700*math.cos(math.radians(xita))]
+             self.vy=[700*math.sin(math.radians(xita))]
+             self.v=[v0]
+             self.x=[0]
+             self.y=[0]
+             self.t=[0]
+             self.totaltime=totaltime
+             self.dt=timestep
+             self.B2=B2
+             self.m=m
+             self.xita=xita
+             self.vw=vw
+             
+    def run(self):
+        time=0
+        while(time<self.totaltime):
+               self.x.append(self.x[-1]+self.vx[-1]*self.dt)
+               self.y.append(self.y[-1]+self.vy[-1]*self.dt) 
+               self.vx.append(self.vx[-1]-(self.B2*math.sqrt(pow(self.vx[-1]+self.vw,2)+pow(self.vy[-1],2))*(self.vx[-1]+self.vw)\
+                              *self.dt/self.m)\
+                              *pow(1-self.y[-2]*0.0065/273.15,2.5))
+               self.vy.append(self.vy[-1]-(self.B2*math.sqrt(pow(self.vx[-1]+self.vw,2)+pow(self.vy[-1],2))*self.vy[-1]\
+                              *self.dt/self.m)\
+                              *pow(1-self.y[-2]*0.0065/273.15,2.5)
+                              -9.8*self.dt)
+               self.v.append(math.sqrt(pow(self.vx[-1],2)+pow(self.vy[-1],2)))
+               self.t.append(self.t[-1]+self.dt)
+               time+=self.dt
+       
+    def showresults(self):
+        plot1,=pl.plot(self.x,self.y,'r')
+        pl.xlabel('x')
+        pl.ylabel('y')
+        pl.xlim(0,50000)
+        pl.ylim(0,50000)
+        pl.show()
+
+class trajectory(shell):
+    def findtheangle(self):
+        x0=int(input('目标横坐标'))
+        y0=int(input('目标纵坐标'))
+        v_initial=int(input('初速度'))
+        delta_y=[]
+        for i in range(90):
+            g=shell(xita=i+1,v0=v_initial)
+            g.run()
+            if max(g.x)<x0:
+                delta_y.append(abs(y0)) 
+            else:
+                for j in range(len(g.x)):
+                    if g.x[j-1]<x0 and g.x[j]>x0:
+                        delta_y.append(abs(g.y[j-1]-y0))
+        for l in range(90):
+            if delta_y[l]==min(delta_y):
+                b=shell(xita=l+1,v0=v_initial)
+                b.run()
+                b.showresults()
+                print('the angle should be')
+                print(l+1)
+             
+d=trajectory()
+d.findtheangle()    
+  
