@@ -13,7 +13,8 @@ Exercise_01:
 [Exercise_05:Problem2.9]
 (https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/exercise5.md)
 
-Exercise_06 
+[Exercise_06:Problem2.10]
+(https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/exercise6.md)
 
 Exercise_07 
 
