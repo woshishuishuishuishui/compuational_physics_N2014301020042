@@ -1,0 +1,60 @@
+import math
+class shell:
+    def __init__(self,totaltime=5000,timestep=0.1,v0=700,\
+                   xita=45,\
+                   m=1,B2=0.00004,\
+                   vw=1):
+             self.vx=[700*math.cos(math.radians(xita))]
+             self.vy=[700*math.sin(math.radians(xita))]
+             self.v=[v0]
+             self.x=[0]
+             self.y=[0]
+             self.t=[0]
+             self.totaltime=totaltime
+             self.dt=timestep
+             self.B2=B2
+             self.m=m
+             self.xita=xita
+             self.vw=vw
+             
+    def run(self):
+        time=0
+        while(time<self.totaltime):
+               self.x.append(self.x[-1]+self.vx[-1]*self.dt)
+               self.y.append(self.y[-1]+self.vy[-1]*self.dt) 
+               self.vx.append(self.vx[-1]-(self.B2*math.sqrt(pow(self.vx[-1]+self.vw,2)+pow(self.vy[-1],2))*(self.vx[-1]+self.vw)\
+                              *self.dt/self.m)\
+                              *pow(1-self.y[-2]*0.0065/273.15,2.5))
+               self.vy.append(self.vy[-1]-(self.B2*math.sqrt(pow(self.vx[-1]+self.vw,2)+pow(self.vy[-1],2))*self.vy[-1]\
+                              *self.dt/self.m)\
+                              *pow(1-self.y[-2]*0.0065/273.15,2.5)
+                              -9.8*self.dt)
+               self.v.append(math.sqrt(pow(self.vx[-1],2)+pow(self.vy[-1],2)))
+               self.t.append(self.t[-1]+self.dt)
+               time+=self.dt
+       
+class find_the_min_speed(shell):
+    def the_v_required_list(self):
+        x0=int(input('目标横坐标'))
+        y0=int(input('目标纵坐标')) 
+        v0_required=[]
+        for i in range(90):
+            delta_y=[]
+            for k in range(3000):
+                a=shell(xita=i+1,v0=k+1)
+                a.run()
+                if max(a.x)<x0:
+                    delta_y.append(y0) 
+                else:
+                    for j in range(len(a.x)):
+                        if a.x[j-1]<x0 and a.x[j]>x0:
+                            delta_y.append(abs(a.x[j-1]-y0))
+            for l in range(3000):
+                if delta_y[l]==min(delta_y):
+                    v0_required.append(l+1)
+        for k in range(90):
+            if v0_required[k]==min(v0_required):
+                print('最小速度和对应角度为')
+                print(min(v0_required),k+1)
+b=find_the_min_speed()
+b.the_v_required_list()
