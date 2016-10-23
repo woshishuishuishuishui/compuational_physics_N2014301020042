@@ -13,13 +13,15 @@
   
   1.对给定点，给定初始速度，发炮打固定点，求出射角和轨迹，代码(https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/作业2.10，给定目标和炮弹初速度，求出射角，目标高于炮)
   
+  它可以实现：输入目标点坐标，输入炮的发射初速度，给出在1度精确范围内最优发射角，并作出轨迹图。但是还不能实现到达目标点后轨迹图停止，而是穿过目标后延伸。
   运行结果：
   
   ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/炮打定点运行.png)
  
   对于炮高于目标：代码
 (https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/打定点炮，定点低于炮)
-
+  
+  它的作用和上面打高于炮的目标一样。
   运行结果：
   
   ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/定点低于炮的%20取负角运行.png)
@@ -33,10 +35,14 @@
 ##结论：
      如果可以，无论第一问还是第二问，扫描角度都可以选用range(900)，对应角度就是计数变量i/10之类。
      
+     
      第一问求轨迹对于无解的情况没法处理
      
+     
      第二问很大一部分输入给定点的情况下是能看出来无法操作的，但是感觉还可以继续改，如果有时间
      
+     
      一个很大的问题是我的两幅展示结果图，都是穿过目标后继续前行的，所以很不好看，希望老师可以注意
+
 ##致谢：
      主要模仿上一次作业的程序
