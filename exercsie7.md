@@ -1,3 +1,4 @@
+#正文：
 ##3.14：poincare section：
 ##[代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.12代码.py)
 
@@ -31,7 +32,7 @@ FD=0.5时，取13个极大值点所在点：
                    39.9194,-8.88202
                    43.75,-9.92261
                    47.2581,-10.8331
-                   B=-0.237024 A=0.476012
+                   用计算器计算回归系数：B=-0.237024 A=0.476012
                    因此 logΔθ=Bt+A Δθ=e^A*e^Bt=1.6096*e^-0.2370t
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/FD%3D0.5的角位移差.png)
 
@@ -45,7 +46,7 @@ FD=1.2时，取8个极大值点所在点：
                   33.5484,-5.32362
                   43.1855,-1.55671
                   47.5806,-2.01457
-                  B=0.141568 A=-8.813870
+                  用计算器计算回归系数：B=0.141568 A=-8.813870
                   因此 logΔθ=Bt+A Δθ=e^A*e^Bt=1.4866*10^(-4)*e^0.1416t 
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/初始角位移为0.2和0.2-0.001的差.png)
 
@@ -64,7 +65,7 @@ FD=1.2时，取8个极值点所在点：
                 29.2003,-1.1116
                 33.0981,-1.67352
                 44.5901,0.433663
-                B=0.235786    A=-8.590968
+                用计算器计算回归系数：B=0.235786    A=-8.590968
                 因此 logΔθ=Bt+A Δθ=e^A*e^Bt=1.8578*10^(-4)*e^0.2358t 
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/解对q的稳定性，FD%3D1.2.png)
 
@@ -77,6 +78,13 @@ FD=0.5时，取7个极值点所在点：
                 15.8938,-6.69615
                 20.4301,-6.75858
                 25.1008,-6.80021
-                B=0.123403 A=-9.067140
+                用计算器计算回归系数：B=0.123403 A=-9.067140
                 因此 logΔθ=Bt+A Δθ=e^A*e^Bt=1.1540*10^(-4)*e^0.1234t
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/解对q的稳定性，FD%3D0.5.png)
+
+#结论：
+
+#参考：
+课本3.3
+蔡浩讲义
+秦大粤代码
