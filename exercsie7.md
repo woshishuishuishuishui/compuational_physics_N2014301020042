@@ -1,6 +1,20 @@
+##3.14：poincare section：
+##[代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.12代码.py)
+
+在t=2nπ/Ω时作出的轨迹图：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/0的庞加莱.png)
+
+在t=(2nπ+π/4)/Ω时作出的轨迹图：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/0.25pi的庞加莱.png)
+
+在t=(2nπ+π/2)/Ω时做出的轨迹图：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/0.5pi的庞加莱.png)
+
+
+
 ##3.13：解对θ0的稳定性：
-[FD=1.2的代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.13角位移的稳定性.py)
-[FD=0.5的代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.13角位移的稳定性FD%3D0.5.py)
+##[FD=1.2的代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.13角位移的稳定性.py)
+##[FD=0.5的代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.13角位移的稳定性FD%3D0.5.py)
 
 FD=0.5时，取13个极大值点所在点：
                    
@@ -36,7 +50,7 @@ FD=1.2时，取8个极大值点所在点：
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/初始角位移为0.2和0.2-0.001的差.png)
 
 ##3.14：解对q的稳定性：
-[FD=1.2的代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/解对q的稳定性.py)
+##[FD=1.2的代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/解对q的稳定性.py)
 
 对FD=0.5的代码完全一样
 
