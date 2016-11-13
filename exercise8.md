@@ -35,13 +35,16 @@ FD=1.465时的poincare section：![Alt text](https://github.com/woshishuishuishu
 
 
 
-程序中将1.35到1.5等分为100份。
+程序中将1.35到1.5等分为150份。
 
 运行图中的FD=1.44，我们认为它的解稳定后的周期为2T，理由如背景介绍所说，因为它对应“两团”θ，但是它确实是很多个θ，原因是，通过我们的代码可以看出，我们把时间分为间隔dt长度的左开右闭区间，再来逐
 个区间检验庞加莱想取的时间点在不在这个区间内，所以说我们取的点和庞加莱想取的点差距小于dt，不一定是庞加莱想取的那个点，因此受dt的限制，不是严格的按庞加
 莱的想法每隔T取点。所以会出现运行图的bifurcation diagram中每个FD会对应“很多”个点，而不是2^n个，但是还是能够区分的，在n较小时。
 
 bifurcation不知道怎么求，这个图实在太糙了
+
+将FD=1.35到1.5，15等分，运行图：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.20%2015等分.png)
 
 ##3.21：
 可以通过运行程序时改变相关参量来运行
