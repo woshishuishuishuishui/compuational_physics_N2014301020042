@@ -18,7 +18,9 @@ problem3.18 3.19 3.20 3.21
 
 做的poincare section是从300个周期以后取的点，这时以后肯定是稳定状态的。不然没法验证。
 FD=1.4时的poincare section：![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.18%20FD%3D1.4.png)
+
 FD=1.44时的poincare section：![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.18%20F%3D1.44.png)
+
 FD=1.465时的poincare section：![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.18%20FD%3D1.465.png)
 
 
@@ -30,6 +32,7 @@ FD=1.465时的poincare section：![Alt text](https://github.com/woshishuishuishu
 
 运行图：
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.20图.png)
+
 
 例如运行图中的FD=1.44，我们认为它的解稳定后的周期为2T，理由如背景介绍所说。但是通过我们的代码可以看出，我们把时间分为间隔dt长度的左开右闭区间，再来逐
 个区间检验庞加莱想取的时间点在不在这个区间内，所以说我们取的点和庞加莱想取的点差距小于dt，不一定是庞加莱想取的那个点，因此受dt的限制，不是严格的按庞加
