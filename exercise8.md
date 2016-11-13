@@ -9,7 +9,7 @@ problem3.18 3.19 3.20 3.21
 
 另一个可以验证这种增加的方式是T'=2^n*T的方法是bifurcation diagram。根据bifurcation diagram的概念，他的想法和庞加莱想法相同，但是可以更加直观的看到多大的FD的物理摆解是T'=2^n*T的，并且T'随FD的变化。
 
-所以说这两种验证方法都是在poincare section基础上进行的，实际上也确实不需要新的东西，所以不在这再介绍一遍。
+所以说这两种验证方法都是在poincare section基础上进行的，所以不在这再介绍一遍。
 
 #正文：
 
@@ -17,6 +17,7 @@ problem3.18 3.19 3.20 3.21
 ##[代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.18代码.py)
 
 做的poincare section是从300个周期以后取的点，这时以后肯定是稳定状态的。不然没法验证。
+
 FD=1.4时的poincare section：![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.18%20FD%3D1.4.png)
 
 FD=1.44时的poincare section：![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.18%20F%3D1.44.png)
