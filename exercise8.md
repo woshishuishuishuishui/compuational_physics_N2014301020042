@@ -35,7 +35,7 @@ FD=1.465时的poincare section：![Alt text](https://github.com/woshishuishuishu
 
 将FD=1.35到1.5，75等分，运行图：
 
-![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.20%2015等分.png)
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.20%2075等分.png)
 
 
 将FD=1.35到1.5，15等分，运行图：
