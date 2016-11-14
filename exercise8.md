@@ -30,7 +30,7 @@ FD=1.465时的poincare section：![Alt text](https://github.com/woshishuishuishu
 ##[代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.20代码.py)
 
 程序中将FD=1.35到1.5，150等分,运行图：
-![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.20%2075等分.png)
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.20图.png)
 
 
 将FD=1.35到1.5，75等分，运行图：
