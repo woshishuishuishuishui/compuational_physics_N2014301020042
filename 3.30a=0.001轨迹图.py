@@ -1,6 +1,6 @@
 import pylab as pl
 class billiard:
-    def __init__(self,α=0.001,r=1,x0=0.2,y0=0,vx0=0.8,vy0=0.6,total_time=2500,dt=0.01):
+    def __init__(self,α=0.001,r=1,x0=0.2,y0=0,vx0=0.8,vy0=0.6,total_time=1000,dt=0.01):
         self.α=α
         self.r=r
         self.vx0=vx0
@@ -72,11 +72,14 @@ class billiard:
                         self.vy[-1]=self.vy[-2]
                         break
 
-a=billiard(α=0.001)
+Vx=[]
+X=[]
+a=billiard(α=0.01,total_time=100)
 a.trajectory()
-pl.plot(a.x,a.y)
+
+
+pl.plot(a.x,a.y,".")
 pl.xlabel("x")
 pl.ylabel("y")
 pl.grid(True)
-pl.show()
- 
+pl.show
