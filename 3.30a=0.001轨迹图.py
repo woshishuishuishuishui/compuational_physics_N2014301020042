@@ -78,8 +78,10 @@ a=billiard(α=0.01,total_time=100)
 a.trajectory()
 
 
-pl.plot(a.x,a.y,".")
+pl.plot(a.x,a.y)
 pl.xlabel("x")
 pl.ylabel("y")
+pl.xlim(-1,1)
+pl.ylim(-1.01,1.01)
 pl.grid(True)
 pl.show
