@@ -44,6 +44,68 @@ vy'=vy-2(|v>·|n>)(y-y0)/[(x-x0)^2+(y-y0)^2]^0.5
 这样就达到了目的：用碰撞前速度和碰撞点表示碰撞后速度。
 
 ##3.30：
-做出桌球运动轨迹图： ##[代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.30a%3D0.001轨迹图.py)
+做出桌球运动轨迹图： 
+##[α=0.001轨迹图代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.30a%3D0.001轨迹图.py)
 
+做出桌球运动的phase-space图：
+##[α=0.001P-S代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.30a%3D0.001PS图.py)
 
+结果：
+
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.001，T%3D500轨迹图.png)
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.001，T%3D2000PS图.png)
+
+##α=0.01的代码只用改变一下初始条件：α，总时间T（适当的时间做出来的图好看）
+
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.01，T%3D100轨迹图.png)
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.01，T%3D2000PS图.png)
+
+##α=0.1：
+
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.1，T%3D500轨迹图.png)
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.1，T%3D1000PS图.png)
+
+##用了以上基础，稍微添加代码就可以做出细微改变初始条件时候的logR-t图像，R为两个不同解的桌球的距离。
+
+##[总时间T=50内的logR-t的代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/3.30求logR-t.py)
+
+##α=0.001，初始x0=0.2和x0=0.201的logR-t：
+
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.001x0%3D0.201x0%3D0.2，T%3D50.png)
+
+##α=0.01，初始x0=0.2和x0=0.201的logR-t：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.01，x0%3D0.201，x0%3D0.2，T%3D50.png)
+
+##α=0.1，初始x0=0.2和x0=0.201的logR-t：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.1%2Cx0%3D0.201x0%3D0.2，T%3D50.png)
+
+##α=0.001，初始vx0=0.8和vx0=0.801的logR-t：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.001，vx0%3D0.8vx0%3D0.801，T%3D50.png)
+
+##α=0.01，初始vx0=0.8和vx0=0.801的logR-t：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.01，vx0%3D0.8vx0%3D0.801T%3D50.png)
+
+##α=0.1，初始vx0=0.8和vx0=0.801的logR-t：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.1vx0%3D0.8vx0%3D0.801T%3D50.png)
+
+##计算Lyapunov系数的方法：
+在图上取点，输入计算器，计算线性回归方程的斜率，截距，相关系数，不能把所有点输进去是缺点。
+
+例：α=0.01，x0=0.2和x0=0.201的logR-t：取点：
+                                        
+                                         (1.85484,-7.34378)
+                                         
+                                         (5.28226,-6.62968)
+                                         
+                                         (11.9758,-5.88046)
+                                         
+                                         (16.1694,-5.33025)
+                                         
+                                         (21.4113,-4.8737)
+                                         
+                                         (27.5,-4.26496)
+                                        
+                                         (31.4919,-3.82011)
+                                         
+                                         计算得：斜率B=0.1138208 截距A=-7.3300511 相关系数r=0.9945826
+                                         因此它的Lyapunov系数为0.1138208。
