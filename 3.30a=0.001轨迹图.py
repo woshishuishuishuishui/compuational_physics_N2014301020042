@@ -78,5 +78,5 @@ pl.plot(a.x,a.y)
 pl.xlabel("x")
 pl.ylabel("y")
 pl.grid(True)
-pl.show
+pl.show()
  
