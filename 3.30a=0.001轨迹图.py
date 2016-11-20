@@ -74,7 +74,7 @@ class billiard:
 
 Vx=[]
 X=[]
-a=billiard(α=0.01,total_time=100)
+a=billiard(α=0.001,total_time=100)
 a.trajectory()
 
 
