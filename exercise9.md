@@ -35,7 +35,7 @@ vx'=vx-2(|v>·|n>)nx
 
 vy'=vy-2(|v>·|n>)ny
 
-而|n>=|ex>(x-x0)/[(x-x0)^2+(y-y0)^2]^0.5+|ey>(y-y0)/[(x-x0)^2+(y-y0)^2]^0.5，x0，y0为圆心坐标，nx，ny也可用x，y表示。代入后：
+而|n>=|ex>(x-x0)/[(x-x0)^2+(y-y0)^2]^0.5+|ey>(y-y0)/[(x-x0)^2+(y-y0)^2]^0.5，x0，y0为圆心坐标，由此可见nx，ny也可用x，y表示。代入vx'，vy'后：
 
 vx'=vx-2(|v>·|n>)(x-x0)/[(x-x0)^2+(y-y0)^2]^0.5
 
@@ -115,7 +115,13 @@ vy'=vy-2(|v>·|n>)(y-y0)/[(x-x0)^2+(y-y0)^2]^0.5
                                          其余图像也可以根据这个方法来求出Lyapunov系数。
                                          
 #结论：
-从作出的logR-t图像可以看出混沌现象。
+从作出的logR-t图像可以看出混沌现象。但是我觉得不做logR-t而直接做R-t图可以更直观看出混沌现象，比如α=0.01，初始位置有较小差别（x0=0.2和x0=0.201）的两个解的R-t图：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.01，x0%3D0.2，x0%3D0.20，T%3D50的R-t图.png)
+
+α=0.01，初始速度有较小差别（vx0=0.8和vx0=0.801）的两个解的R-t图：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/α%3D0.01，vx0%3D0.8，vx0%3D0.801，T%3D50的R-t图.png)
+
+已经很明显看出两个解的差的函数值不在0附近，是“混沌的”。
 
 #参考：
 前面的作业
