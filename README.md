@@ -22,7 +22,7 @@ Exercise_01:
 [Exercise_08:Problem3.18 3.19 3.20 3.21] 
 (https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/exercise8.md)
 
-[Exercise_09:Problem3.20]
+[Exercise_09:Problem3.30]
 (https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/exercise9.md)
 
 Exercise_10
