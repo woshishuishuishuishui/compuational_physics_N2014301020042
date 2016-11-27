@@ -25,7 +25,8 @@ Exercise_01:
 [Exercise_09:Problem3.30]
 (https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/exercise9.md)
 
-Exercise_10
+[Exercise_10:Problem4.8,4.9]
+(https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/exercise10.md)
 
 Exercise_11
 
