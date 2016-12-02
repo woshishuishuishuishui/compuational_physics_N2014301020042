@@ -46,7 +46,7 @@ L-e的散点图和L值列表，结果如下：
 
 #4.20:
 
-[作出e=0.1，θ0=0和θ0=0.01的Δθ-t、w1-t、w2-t、Δw-t代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/4.20.py)
+##[作出e=0.1，θ0=0和θ0=0.01的Δθ-t、w1-t、w2-t、Δw-t代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/4.20.py)
 
 结果图如下，依次是Δθ-t w1-t w2-t Δw=w1-w2 - t ：
 
@@ -59,3 +59,11 @@ e=0.1时的解根本不是混沌的(对θ0来说)，从他的Δθ-t来看。
 
 
 #结论：
+
+4.19和4.20显示，对于不同的初始条件e，解θ-t对初始条件θ0不总是混沌的。从4.19的20个不同e的Δθ-t图可以看出这一点。
+
+混沌的情形用线性回归相关的公式写入程序计算L系数，比原来我用的用计算器方法好多了，取个别点用计算器来算丧失了大量数据并且麻烦。
+
+#参考：
+
+课本4.6节
