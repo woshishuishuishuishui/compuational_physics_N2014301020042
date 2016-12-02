@@ -30,8 +30,8 @@ class orbit:
                 self.θ[-1]=self.θ[-1]-2*math.pi
             if self.θ[-1]<=-math.pi:
                 self.θ[-1]=self.θ[-1]+2*math.pi
+
 L=[]
-A1=[]
 for i in range(20):
     a=orbit(e=0+i/20)
     a.trajectory()
@@ -50,9 +50,12 @@ for i in range(20):
     B=(pro-len(a.t)*t_average*d_average)/(sq-len(a.t)*t_average*t_average)
     A=d_average-B*t_average
     L.append(B)
-    A1.append(A)
     pl.plot(a.t,d,".")
     pl.grid(True)
     pl.show()
-
 print(L)
+e=[]
+for i in range(20):
+    e.append(i/20)
+pl.plot(e,L,".")
+pl.show
