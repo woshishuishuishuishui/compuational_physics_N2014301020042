@@ -12,9 +12,9 @@ class field:
         for i in range(100):
             self.b.append(0)
         for i in range(201):
-            b.append(1)
+            self.b.append(1)
         for i in range(100):
-            b.append(0)
+            self.b.append(0)
         for i in range(201):
             self.V0.append(self.b)    
         
@@ -30,7 +30,7 @@ class field:
             for i in range(399):
                 vtemp=[0]
                 for j in range(399):
-                    vtemp.append((Vold[i][j]+Vold[i+2][j]+Vold[i][j+2]+Vold[i+2][j+2])/4)
+                    vtemp.append((Vold[i][j+1]+Vold[i+2][j+1]+Vold[i+1][j]+Vold[i+1][j+2])/4)
                 vtemp.append(0)
                 Vnew.append(vtemp)
             Vnew.append(self.a)
@@ -45,7 +45,7 @@ class field:
             for i in range(399):
                 vtemp=[0]
                 for j in range(399):
-                    vtemp.append((Vold[i][j]+Vold[i+2][j]+Vold[i][j+2]+Vold[i+2][j+2])/4)
+                    vtemp.append((Vold[i][j+1]+Vold[i+2][j+1]+Vold[i+1][j]+Vold[i+1][j+2])/4)
                 vtemp.append(0)
                 Vnew.append(vtemp)
             Vnew.append(self.a)
@@ -69,10 +69,16 @@ class field:
                         self.x.append(-2+0.01*i)
                         self.y.append(2-0.01*j)
                       
-            
-              
+a=[-1,-1,1,1,-1]
+b=[-1,1,1,-1,-1]            
+c=[-2,-2,2,2,-2]
+d=[-2,2,2,-2,-2]               
 
 z=field()
 z.update_V()
 pl.plot(z.x,z.y,".")
+pl.plot(a,b)
+pl.plot(c,d)
+pl.grid(True)
 pl.show()
+
