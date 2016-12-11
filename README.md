@@ -30,7 +30,8 @@ Exercise_01:
 
 Exercise_11
 
-Exercise_12
+[Exercise_12:Problem5.1 5.2 5.4]
+(https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/exercise12.md)
 
 Exercise_13
 
