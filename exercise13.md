@@ -82,7 +82,8 @@ X0=0.1：
 
 与X0=0.4的频谱果然有不同。这证明了弹不同的位置会有不同的音调组合，但是基频150Hz总是主要成分。
 
-#[6.13代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/6.13%20频谱对比.py）
+#[6.12代码](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/6.13%20频谱对比.py)
+
 
 此处高斯波包的中心点在X0=0.4,根据这个代码可以看出我们可以做出考察点在x0=0.1,0.4,0.5的频谱图：
 
