@@ -35,7 +35,7 @@ Exercise_01:
 (https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/exercise12.md)
 
 #老师你好，上次我的作业11完成后忘记把作业的链接给写进这个README链接！老师可以现在点一下作业11的链接进去看一下最后修改日期，是12月2号，可以证明我没骗人！能不能麻烦老师把上次作业的成绩帮忙记录上，谢谢！
-Exercise_13
+[Exercise_13:Problem6.9 6.10 6.12 6.13](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/exercise13.md)
 
 Exercise_14
 
