@@ -66,6 +66,8 @@ u(x,t)=ΣDn * cos(nπct/L) * sin(nπx/L)    ,    Dn=(2/L)∫φ(x)sin(nπx/L)dx
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/6.12频谱%20高斯波包.png)
 
 真实情形：
+
+
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/6.12频谱%20直线.png)
 
 可见真实情形的频谱图只包含f=150Hz一个明显的频率，这说明此初始条件下弹出的音调为150Hz的频率。
