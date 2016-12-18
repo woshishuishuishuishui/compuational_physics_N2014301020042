@@ -39,15 +39,15 @@ class wave:
 a=wave()
 a.propagate()
 P=(abs(np.fft.rfft(a.y)))**2
-frequency=np.linspace(0, a.c/(a.dx/2), len(P))
+frequency=np.linspace(0, a.c/(a.dx*2), len(P))
 
 pl.plot(frequency,P)
-pl.xlim(0,20000)
+pl.xlim(0,5000)
 pl.xlabel("frequency")
 pl.ylabel("power")
 pl.show()
 pl.plot(frequency,P)
-pl.xlim(0,10000)
+pl.xlim(0,3000)
 pl.xlabel("frequency")
 pl.ylabel("power")
 pl.show()
