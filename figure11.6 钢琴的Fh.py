@@ -35,9 +35,7 @@ class wave:
         self.y.append(self.y2[-2])
         self.F.append(self.FT*(self.y[-1]/self.dx))
         self.Fh.append(-self.K*pow(self.y2[round((self.L*self.b)/self.dx)]-self.zh[-1],3))
-        k=0
         while self.t[-1]<self.T:
-            k=k+1 
             self.t.append(self.t[-1]+self.dt)
             self.y3.append(0)
             for i in range(round((self.L*self.b)/self.dx)-2):
