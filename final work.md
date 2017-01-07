@@ -76,7 +76,7 @@
 
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/11.1%20β%3D0.04的频谱.png)
 
-通过频谱图我们发现，f=n*f1的成分的振幅都是0.解析解中，f=*f1的成分的振幅：
+通过频谱图我们发现，f为n倍基频的成分的振幅都是0.解析解中，f为n倍基频的成分的振幅：
 
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/β成分消失的解析.png)
 
