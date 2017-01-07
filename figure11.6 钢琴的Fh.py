@@ -61,9 +61,7 @@ class wave:
             self.y3=[]
             if self.y2[round((self.L*self.b)/self.dx)]-self.zh[-1]>0:
                 break
-            for i in range(11):
-                if k==10*i:
-                    self.Y.append(self.y2)
+            
                     
 a=wave()
 a.propagate()
