@@ -30,11 +30,11 @@
 
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/两端固定弦的解析解.png)
 
-吉他模型中，波动方程边界条件即为两端固定，初始条件为各点初速度为0，人手拉弦一点，使弦成两条线段相交于提起点，初始波形如图：  
+吉他模型中，波动方程边界条件为两端固定，初始条件为各点初速度为0，人手拉弦一点，使弦成两条线段相交于提起点，初始波形如图：  
 
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/提起的吉他弦初始波形.png)  
 
-（我们设提起的最高点对应横坐标为βL，之后将研究这个提起点的影响）
+（我们设提起的最高点对应横坐标为βL，之后将研究这个提起点位置的的影响）
 
 有了对解析解的认识，在计算方法计算之前，我们可以得知在吉他模型的初始条件下，系数Cn为0.
 
