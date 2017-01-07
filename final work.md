@@ -42,7 +42,7 @@
 
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/波动方程近似表示.png)
 
-以上式为基础，可以写出求波动方程的计算解的程序，并如前一部分所说，为了研究声调我们需要将桥所受作用力进行傅里叶展开，来看它个频率成分的振幅大小，这需要用到快速傅里叶变换的手段。我们将课本P358，figure11.2给出的条件写入程序进行模拟。弦长L=0.65m，提起点为βL=L/5，β=1/5，声速320m/s，绳中张力149N，r=1，dx=0.65mm，经历10000个dt。
+以上式为基础，可以写出求波动方程的计算解的程序，并如前一部分所说，为了研究声调我们需要将桥所受作用力进行傅里叶展开，来看它个频率成分的振幅大小，这需要用到快速傅里叶变换的手段。我们将课本P358，figure11.2给出的条件写入程序进行模拟。弦长L=0.65m，提起点为βL=L/5，β=1/5，c为320m/s，绳中张力149N，r=1，dx=0.65mm，经历10000个dt。
 
 [代码在此](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/11.1%20波形图、桥上力频谱.py)
 
@@ -123,9 +123,86 @@
 ![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/钢琴结构示意图.png)
 
 钢琴的原理比吉他更复杂，它也是靠弦振动来作用于桥点，桥点固连音板，音板振动，引起空气压缩产生声波。它的复杂在于，弦受到一个锤子的打击，二者碰撞过程中弦获得一定的位移与速度，之后二者分离，弦做满足两端固定波动方程的运动。
-换言之，如果取锤、弦碰撞结束时刻为初始时刻，初始条件为一定的初始波形、一定的速度分布。我们也可以取初始时刻为碰撞开始的时刻，对碰撞机理、碰撞过程做一定简化，来求解弦的振动。这时严格来说弦满足的不是波动方程了，因为它收到了一定的外力，这时，我们不能得到解析解了，只能把这种碰撞简化体现在计算方法中。
+换言之，如果取锤、弦碰撞结束时刻为初始时刻，初始条件为一定的初始波形、一定的速度分布。我们也可以取初始时刻为碰撞开始的时刻，对碰撞机理、碰撞过程做一定简化，来求解弦的振动。这时严格来说弦满足的不是波动方程了，因为它收到了一定的外力，我们不能得到解析解了，只能把这种碰撞简化体现在计算方法中。
 
 与吉他相同，如果解出了弦的运动解，可以表示出桥点的力，利用快速傅里叶变换将此力做傅里叶展开，可以分析声调的频率各成分的强度。
 
 ###模拟吉他弦的振动，对锤与弦的碰撞简化处理
 
+如前一部分所述，我们要求解弦与锤的碰撞过程中弦与锤的运动。锤子的简化如下，由一个物块与轻弹簧相连构成：
+
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/锤示意图.png)
+
+根据课本介绍，这个轻弹簧在它两端的作用力![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/弹簧作用力.png) z为弹簧压缩量。
+
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/钢琴弦碰撞过程方程.png)
+
+要注意这方程适用于碰撞过程，也就是y(i)-Y< s时。在计算程序中，我们取三个相邻弦分割元参与碰撞，即满足上述方程，受到的力Fh也分配到三个质元上，比例为中间一个受到0.5Fh，两边的受到0.25Fh。
+与吉他模一样，将以上方程进行近似处理，如下：
+
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/钢琴弦碰撞方程的计算表示.png)
+
+以此为基础，我们可以写出计算程序。我们按照课本P366，figure11.6的条件进行计算，锤子初速度vh0=0.5m/s，f=262Hz，L=0.62m，其中需要另外赋值质量密度μ=0.01kg/m。L分割为1000等份。
+
+[代码在此：figure11.6 钢琴的Fh](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/figure11.6%20钢琴的Fh.py)
+
+[代码在此：figure11.6 接触点的y-t](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/figure11.6%20接触点的y-t.py)
+
+[代码在此：figure11.6 桥点作用力的频谱](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/figure11.6%20F的频谱.py)
+
+依次运行结果如下：
+碰撞作用力Fh-t：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/figure11.6%20钢琴的Fh.png)
+
+碰撞接触中心的弦点的y-t：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/figure11.6%20接触中心点的Y-t.png)
+
+桥点作用力F的频谱：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/figure11.6%20力的频谱.png)
+
+观察三个运行结果，可以发现碰撞时间为2.75ms左右，可见碰撞过程很短促。在碰撞结束以后，整个弦又成了两端固定的自由振动弦，做周期运动。桥点作用力的频谱可以反映声调的各频率成分的强度大小，可见此时基频262Hz的强度最大，其他频率的成分强度很小。
+
+###如何弹出不同的音调、频率成分？
+对于同一根琴弦，同一个锤子，如果我们改变锤子的初速度，桥点作用力的频谱成分比例也会发生改变，而不是各频率成分的强度比例不变、变化相同的倍数。这与我们的直观感受有点相悖。改变上一部分的程序的初速度，即a=(vh0=4),运行程序，得到如下结果：
+
+碰撞作用力Fh-t：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/figure11.7%20钢琴的Fh.png)
+
+碰撞接触中心的弦点的y-t：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/figure11.7%20接触中心点的y-t.png)
+
+桥点作用力F的频谱：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/figure11.7%20力的频谱.png)
+
+果然，与我们的直觉不同，频谱各成分的强度比改变了，此时f1和2f1的强度比比之前小了。这说明改变锤子初速度可以实现改变音调的频谱成分。这种现象的根源在于Kz^3这种形式的力，即非线性弹性力。这现象在各类乐器中十分常见。当然，从两个不同初速度锤子引起的声调频谱图可以看出，速度大的频谱的总强度要更大。这意味着，声音强度不同，音调成分不同。
+
+###改变弦线，改变锤子的弹性性质，来改变频谱、改变音调
+钢琴有许多根弦，不同的弦在我们的方程中，意味着某些系数的改变，如张力FT、质量密度μ、弦长L、弹性系数K、锤子质量m等等，他们与c=(T/μ)^0.5、基频f=c/2L等等密切相关。
+我们按照课本练习题11.8给出的条件，重新运行之前的程序，即在运行时：a=wave(vh0=0.5,L=1.06，T=349，K=60000000000，m=0.0043，F=65)
+a=wave(vh0=4,L=1.06，T=349，K=60000000000，m=0.0043，F=65)
+
+得到如下的结果：
+
+锤速度为vh0=0.5m/s：
+
+碰撞作用力Fh-t：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/11.8%20figure11.6中C调%20低2%20钢琴的Fh.png)
+
+碰撞接触中心的弦点的y-t：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/11.8%20figure11.6中C调%20低2%20接触中心点y-t.png)
+
+桥点作用力F的频谱：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/11.8%20figure11.6中C调%20低2%20力的频谱.png)
+
+锤速度为vh0=4m/s：
+
+碰撞作用力Fh-t：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/11.8%20figure11.7中C调%20低2%20钢琴的Fh.png)
+
+碰撞接触中心的弦点的y-t：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/11.8%20figure11.7中C调%20低2%20接触中心点y-t.png)
+
+桥点作用力F的频谱：
+![Alt text](https://github.com/woshishuishuishuishui/compuational_physics_N2014301020042/blob/master/11.8%20figure11.7中C调%20低2%20力的频谱.png)
+
+可见此时频谱成分相较之前那根弦、那个锤子发生了显著改变，强度最明显的不是基频成分了，而是二倍基频成分。
